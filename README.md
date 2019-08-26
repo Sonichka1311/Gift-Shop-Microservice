@@ -24,7 +24,7 @@
 
 В случае успеха возвращается ответ с HTTP статусом 201 
 
-###2: PATCH /imports/$import_id/citizens/$citizen_id
+### 2: PATCH /imports/$import_id/citizens/$citizen_id
 Принимает на вход JSON в котором можно указать любые допустимые 
 данные о жителе, кроме `citizen_id` и изменяет информацию о 
 жителе в указанном наборе данных. 
