@@ -7,7 +7,7 @@ from flask_restful import abort
 from app.helpers import *
 app_blueprint = Blueprint('api', __name__)
 
-# неправильно работают исключения в проверке схемы
+
 @app_blueprint.route('/imports', methods=['POST'])
 def import_citizens():
     try:
@@ -34,7 +34,7 @@ def import_citizens():
     }
     return jsonify({'data': data}), 201
 
-# перепроверить после смены датабазы
+
 @app_blueprint.route('/imports/<int:import_id>/citizens/<int:citizen_id>', methods=['PATCH'])
 def patch_citizen_info(import_id, citizen_id):
     citizen = Citizen.query.get((import_id, citizen_id))
